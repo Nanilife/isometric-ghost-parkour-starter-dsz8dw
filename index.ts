@@ -78,7 +78,9 @@ let newPosition: Position = {
   x: ghost.position.x + moveX,
   y: ghost.position.y + moveY,
 };
+if (canGoTo(newPosition)) {
   ghost.position = { ...newPosition };
+}
 }
 
 function canGoTo(position: Position): boolean {
