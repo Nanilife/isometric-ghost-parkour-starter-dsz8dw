@@ -80,6 +80,9 @@ function keyPressed() {
   };
   if (canGoTo(newPosition)) {
     ghost.position = { ...newPosition };
+
+    const target = level[newPosition.y][newPosition.x];
+    const value = getDecorationValue(target.decoration);
   }
 }
 
