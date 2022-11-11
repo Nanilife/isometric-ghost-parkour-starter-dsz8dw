@@ -83,6 +83,9 @@ function keyPressed() {
 
     const target = level[newPosition.y][newPosition.x];
     const value = getDecorationValue(target.decoration);
+    if (value > 0) {
+      target.decoration = DecorationFrame.None;
+    }
   }
 }
 
